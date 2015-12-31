@@ -51,4 +51,7 @@ Rails.application.configure do
     :authentication       =>  Rails.application.secrets[:action_mailer]['smtp_settings']['authentication'],
     :enable_starttls_auto => eval( Rails.application.secrets[:action_mailer]['smtp_settings']['enable_starttls_auto']), # true or false
   }
+
+  # Paperclip - ImageMagick
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
