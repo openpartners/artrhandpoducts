@@ -16,4 +16,7 @@ For Art-Hand
 rails g model Product title:string description:text
 rake db:migrate
 rails g controller Products
+...
+rails g migration add_admin_id_to_products admin_id:integer:index
+
  -->

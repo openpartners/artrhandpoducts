@@ -6,10 +6,10 @@ class ProductsController < ApplicationController
 	def show
 	end
 	def new
-		@product = Product.new
+		@product = current_admin.products.build
 	end
 	def create
-		@product = Product.new(product_params)
+		@product = current_admin.products.build(product_params)
 
 		if @product.save
 			redirect_to @product, notice: "Successfully created new product"
