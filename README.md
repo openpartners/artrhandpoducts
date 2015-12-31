@@ -14,5 +14,6 @@ For Art-Hand
     = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|
 
 rails g model Product title:string description:text
-
+rake db:migrate
+rails g controller Products
  -->
