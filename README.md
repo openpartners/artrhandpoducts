@@ -12,4 +12,7 @@ For Art-Hand
   classes, '.form-horizontal' or '.form-inline', as the following:
 
     = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|
+
+rails g model Product title:string description:text
+
  -->
