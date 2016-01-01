@@ -1,12 +1,23 @@
-= image_tag @product.image #.url(:medium)
-%h1= @product.title
-%p= @product.description
-%p
-autor:
-= @product.admin.email
-
-%br/
-
-= link_to "Back", root_path
-= link_to "Edit", edit_product_path
-= link_to "Delete", product_path, method: :delete, data: {confirm: "Are you sure?"}
+#product_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading.product_image
+				%center
+					= image_tag @product.image.url
+			.panel-body
+				%h1= @product.title
+				%p.description= @product.description
+				%hr
+				%p.admin.pull-right
+					by:
+					= @product.admin.email
+			.panel-footer
+				.row
+					.col-md-6
+						.btn-group.pull-left
+							= link_to "Back", root_path, class: "btn btn-default"
+					.col-md-6
+						.btn-group.pull-right
+							= link_to "Edit", edit_product_path, class: "btn btn-default"
+							= link_to "Delete", product_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+						
