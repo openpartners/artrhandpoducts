@@ -5,5 +5,6 @@
 $ ->
 $('#products').imagesLoaded ->
 	$('#products').masonry
-		itemSelector: '.box'
-		isFitWidth:true
+		  itemSelector: '.box',
+  		columnWidth: 120,
+  		isAnimated: true

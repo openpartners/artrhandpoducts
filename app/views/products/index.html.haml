@@ -1,6 +1,6 @@
 #products.transitions-enabled
 	- @products.each do |product|
 		.box.panel.panel-default
-			= link_to (image_tag product.image.url(:medium)), product
+			= link_to (image_tag product.image.url(:medium)), product.image.url, class: 'fancybox', :rel => "gallery1", :title => "#{product.title}"
 			.panel-body
 				%h2= link_to product.title, product

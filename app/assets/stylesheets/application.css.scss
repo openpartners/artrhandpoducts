@@ -11,8 +11,9 @@
  * file per style scope.
  *
  *= require_'masonry/transitions'
- *= require_tree .
  *= require_self
+ *= require fancybox
+ *= require_tree .
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -42,19 +43,20 @@ nav {
   margin: 0 auto;
   width: 100%;
   .box {
-	  margin: 10px;
-	  width: 350px;
+	  margin: 4px;
+	  width: 250px;
 	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	  border-radius: 7px;
 	  text-align: center;
 	  img {
-	  	max-width: 100%;
+	  margin-top: 4px;
+	  	max-width: 98%;
 	  	height: auto;
 	  }
 	  h2 {
 	  	font-size: 22px;
 	  	margin: 0;
-	  	padding: 25px 10px;
+	  	padding: 10px 10px;
 	  	a {
 				color: #474747;
 	  	}
@@ -77,11 +79,11 @@ nav {
 	}
 }
 
-#pin_show {
+#product_show {
 	.panel-heading {
 		padding: 0;
 	}
-	.pin_image {
+	.product_image {
 		img {
 			max-width: 100%;
 			width: 100%;

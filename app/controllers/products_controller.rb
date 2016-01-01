@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 		@product = current_admin.products.build(product_params)
 
 		if @product.save
-			redirect_to @product, notice: "Successfully created new product"
+			redirect_to @product, notice: "Sukces!!! Nowy produkt został dodany"
 		else
 			render 'new'
 		end
@@ -21,9 +21,9 @@ class ProductsController < ApplicationController
 	end
 	def update
 		if @product.update(product_params)
-				redirect_to @product, notice: "Product was successfully updated!"
-			else
-				render 'edit'
+			redirect_to @product, notice: "Produkt został zmieniony"
+		else
+			render 'edit'
 		end
 	end
 	def destroy
