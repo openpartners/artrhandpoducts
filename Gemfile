@@ -7,7 +7,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 4.0', '>= 4.0.5'
 gem 'fancybox2-rails', '~> 0.2.8'
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'haml', '~> 4.0', '>= 4.0.7'
