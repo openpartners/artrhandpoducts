@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_'masonry/transitions'
  *= require_self
  *= require fancybox
  *= require_tree .
@@ -36,37 +35,6 @@ nav {
 				text-decoration: none;
 			}
 		}
-	}
-}
-
-#products {
-  margin: 0 auto;
-  width: 100%;
-  .box {
-	  margin: 4px;
-	  width: 250px;
-	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-	  border-radius: 7px;
-	  text-align: center;
-	  img {
-	  margin-top: 4px;
-	  	max-width: 98%;
-	  	height: auto;
-	  }
-	  h2 {
-	  	font-size: 22px;
-	  	margin: 0;
-	  	padding: 10px 10px;
-	  	a {
-				color: #474747;
-	  	}
-	  }
-	  .admin {
-	  	font-size: 12px;
-	  	border-top: 1px solid #EAEAEA;
-			padding: 15px;
-			margin: 0;
-	  }
 	}
 }
 

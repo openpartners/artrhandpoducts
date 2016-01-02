@@ -1,5 +1,7 @@
 .col-md-6.col-md-offset-3
 	%h1 Edit Product
-	= image_tag @product.image.url(:medium)
-	= render 'form'
-	= link_to "Cancel", product_path
+	%center
+		= image_tag @product.image.url(:medium)
+	- if @product.admin.email == current_admin.email
+		= render 'form'
+		= link_to "Cancel", product_path

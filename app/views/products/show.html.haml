@@ -18,6 +18,7 @@
 							= link_to "Back", root_path, class: "btn btn-default"
 					.col-md-6
 						.btn-group.pull-right
-							= link_to "Edit", edit_product_path, class: "btn btn-default"
-							= link_to "Delete", product_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+							-if admin_signed_in?
+								= link_to "Edit", edit_product_path, class: "btn btn-default"
+								= link_to "Delete", product_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
 						
