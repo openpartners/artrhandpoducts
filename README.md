@@ -22,4 +22,8 @@ rails g migration add_admin_id_to_products admin_id:integer:index
 sudo apt-get install imagemagick -y
 
 rails g paperclip product image
+
+rails g migration add_category_id_to_products category_id:integer
+...
+
  -->

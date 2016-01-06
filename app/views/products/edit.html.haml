@@ -1,7 +1,11 @@
 .col-md-6.col-md-offset-3
-	%h1 Edit Product
+	%h1 Edycja produktu
 	%center
 		= image_tag @product.image.url(:medium)
+		%h3= @product.title
 	- if @product.admin.email == current_admin.email
 		= render 'form'
-		= link_to "Cancel", product_path
+		%center
+			= link_to 'Usuń', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"
+			|
+			= link_to "Zamknij", product_path, class: "btn btn-default"

@@ -13,6 +13,7 @@
 			- if admin_signed_in?
 				%ul.nav.navbar-nav.navbar-right
 					%li= link_to "Dodaj produkt", new_product_path
+					%li= link_to 'Dodaj Kategorie', new_category_path
 					%li= link_to current_admin.email, edit_admin_registration_path
 					%li= link_to "Wyloguj", destroy_admin_session_path, method: :delete
 			- else
@@ -21,5 +22,10 @@
 	.container
 		- flash.each do |name, msg|
 			= content_tag :div, msg, class: "alert alert-info"
-			
+		.row
+			%ul.nav.nav-pills
+				- if @categories
+					- @categories.each do |category|
+						%li{:role => "presentation"}
+							= link_to category.name, category	
 		= yield

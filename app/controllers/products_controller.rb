@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 	before_action :find_product, only: [:show, :edit, :update, :destroy]
+	before_action :find_category, only: [:index, :show, :edit]
 	before_action :authenticate_admin!, except: [:index, :show]
 	def index
 		@products = Product.all.order("created_at DESC")
@@ -34,10 +35,14 @@ class ProductsController < ApplicationController
 
 	private
 	def product_params
-		params.require(:product).permit(:title, :description, :image)
+		params.require(:product).permit(:title, :description, :image, :category_id)
 	end
 
 	def find_product
 		@product = Product.find(params[:id])
+	end
+
+	def find_category
+		@categories = Category.order(:name)
 	end
 end

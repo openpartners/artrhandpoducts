@@ -6,6 +6,9 @@
 					= image_tag @product.image.url
 			.panel-body
 				%h1= @product.title
+				%p.category_name
+					Kategoria:
+					%h3= @product.category.name
 				%p.description= @product.description
 				%hr
 				%p.admin.pull-right
