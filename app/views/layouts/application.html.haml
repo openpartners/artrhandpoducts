@@ -24,7 +24,7 @@
 			= content_tag :div, msg, class: "alert alert-info"
 	.container-fluid
 		.row
-			.col-md-2.text-center
+			.col-md-3.text-center
 				- if admin_signed_in?
 					%ul.nav.nav-sidebar
 					- if @categories
@@ -45,6 +45,6 @@
 										= link_to category.name, category, class: "btn btn-primary"
 								%hr
 
-			.col-md-10
+			.col-md-9
 				=yield
 
