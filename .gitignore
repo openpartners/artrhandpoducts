@@ -8,10 +8,14 @@
 /.bundle
 
 # Ignore the default SQLite database.
-# /db/*.sqlite3
+/db/*.sqlite3
 # /db/*.sqlite3-journal
 # /config/*
+
 /public
+/db/development.sqlite3
+.rvmrc
+.gitignore
 
 # Ignore all logfiles and tempfiles.
 /log/*

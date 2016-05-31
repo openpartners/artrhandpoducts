@@ -22,10 +22,29 @@
 	.container
 		- flash.each do |name, msg|
 			= content_tag :div, msg, class: "alert alert-info"
+	.container-fluid
 		.row
-			%ul.nav.nav-pills
-				- if @categories
-					- @categories.each do |category|
-						%li{:role => "presentation"}
-							= link_to category.name, category	
-		= yield
+			.col-md-2.text-center
+				- if admin_signed_in?
+					%ul.nav.nav-sidebar
+					- if @categories
+						- @categories.each do |category|
+							%li
+								%h2
+									- if category.id < 16 
+										= link_to category.name, category, class: "btn btn-primary"
+									- else
+										= link_to category.name, category, class: "btn btn-primary-red"
+								%hr
+				- else
+					-if @categories
+						- @categories.each do |category|
+							-if category.id < 16
+								%li
+									%h2
+										= link_to category.name, category, class: "btn btn-primary"
+								%hr
+
+			.col-md-10
+				=yield
+
