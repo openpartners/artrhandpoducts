@@ -1,5 +1,0 @@
-PassengerEnabled On
-PassengerLoadShellEnvVars On
-PassengerAppRoot /home/podzieko/allegroapp/artrhandpoducts
-PassengerRuby /usr/local/ruby20/bin/ruby
-RackEnv development
