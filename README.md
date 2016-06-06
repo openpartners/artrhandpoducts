@@ -26,4 +26,6 @@ rails g paperclip product image
 rails g migration add_category_id_to_products category_id:integer
 ...
 
+rails g migrate add_big_to_category
+
  -->
