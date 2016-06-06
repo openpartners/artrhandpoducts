@@ -43,6 +43,6 @@ class ProductsController < ApplicationController
 	end
 
 	def find_category
-		@categories = Category.order(:name)
+		@categories = Category.order("created_at ASC")
 	end
 end
