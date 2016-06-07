@@ -1,9 +1,13 @@
 class ProductsController < ApplicationController
 	before_action :find_product, only: [:show, :edit, :update, :destroy]
-	before_action :find_category, only: [:index, :show, :edit]
-	before_action :authenticate_admin!, except: [:index, :show]
+	before_action :find_category_big, only: [:index, :show, :edit]
+	before_action :find_category_small, only: [:small]
+	before_action :authenticate_admin!, except: [:index, :show, :small]
 	def index
-		@products = Product.all.order("created_at DESC")
+		@products = Product.all.order("created_at ASC")
+	end
+	def small
+		@products = Product.all.order("created_at ASC")
 	end
 	def show
 	end
@@ -42,7 +46,11 @@ class ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 	end
 
-	def find_category
-		@categories = Category.order("created_at ASC")
+	def find_category_big
+		@categories = Category.biged.order("created_at ASC")
+	end
+
+	def find_category_small
+		@categories = Category.small.order("created_at ASC")
 	end
 end

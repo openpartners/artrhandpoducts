@@ -37,13 +37,19 @@
 										= link_to category.name, category, class: "btn btn-primary-red"
 								%hr
 				- else
-					-if @categories
-						- @categories.each do |category|
-							-if category.id < 16
-								%li
-									%h2
-										= link_to category.name, category, class: "btn btn-primary"
-								%hr
+					%ul.nav.nav-sidebar
+					-if params[:action] != "small" and params[:id].to_i < 16
+						- Category.biged.each do |category|
+							%li
+								%h2
+									= link_to category.name, category, class: "btn btn-primary"
+							%hr
+					-else 
+						- Category.small.each do |category|
+							%li
+								%h2
+									= link_to category.name, category, class: "btn btn-primary"
+							%hr
 
 			.col-md-9
 				=yield
