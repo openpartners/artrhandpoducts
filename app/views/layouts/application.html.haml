@@ -39,10 +39,41 @@
 				- else
 					%ul.nav.nav-sidebar
 					-if params[:action] != "small" and params[:id].to_i < 16
-						- Category.biged.each do |category|
-							%li
-								%h2
-									= link_to category.name, category, class: "btn btn-primary"
+						%li
+							= link_to 'Prezent z okazji Rocznicy Ślubu, Jubileuszu', 'http://podziekowania.pl/categories/15', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Prezent z życzeniami dla Młodej Pary', 'http://podziekowania.pl/categories/14', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Ślubne Podziękowania dla Rodziców', 'http://podziekowania.pl/categories/12', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Podziękowania dla świadków w formie dyplomu', 'http://podziekowania.pl/categories/11', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Księga Gości Weselnych do wpisu', 'http://podziekowania.pl/categories/10', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Życzenia prezent na Urodziny', 'http://podziekowania.pl/categories/13', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Pamiątka I Komunii Świętej', 'http://podziekowania.pl/categories/9', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Życzenia na Dzień Matki', 'http://podziekowania.pl/categories/4', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Życzenia uniwersalne', 'http://podziekowania.pl/categories/5', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Prezent z okazji przejścia na emeryturę', 'http://podziekowania.pl/categories/6', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Prezent Imieninowy', 'http://podziekowania.pl/categories/7', class: "btn btn-primary"
+							%hr
+						%li
+							= link_to 'Prezent na Bierzmowanie', 'http://podziekowania.pl/categories/8', class: "btn btn-primary"
 							%hr
 					-else 
 						- Category.small.each do |category|
